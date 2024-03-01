@@ -1,0 +1,16 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1b1b1b;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  margin: 0 20px;
+} */
