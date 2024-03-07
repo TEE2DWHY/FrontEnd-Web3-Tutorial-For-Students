@@ -1,5 +1,5 @@
 import { http, createConfig } from "wagmi";
-import { avalanche, sepolia, polygon, mainnet } from "viem/chains";
+import { avalanche, polygon, mainnet, base } from "viem/chains";
 import { getDefaultConfig } from "connectkit";
 import { injected } from "wagmi/connectors";
 const projectId = import.meta.env.VITE_WALLECONNECTID;
@@ -7,14 +7,19 @@ const projectId = import.meta.env.VITE_WALLECONNECTID;
 export const config = createConfig(
   getDefaultConfig({
     // Your dApps chains
-    chains: [mainnet],
+    chains: [mainnet, polygon, avalanche, base],
     transports: {
       // RPC URL for each chain
       [mainnet.id]: http(),
+      [polygon.id]: http(
+        "https://polygon-mainnet.g.alchemy.com/v2/DHQbsGSoN217EiqkSOufmdyBYajxDNcz"
+      ),
+      [avalanche.id]: http(),
+      [base.id]: http(),
     },
-    connectors: [injected()],
+    // connectors: [injected()],
     // Required API Keys
-    // walletConnectProjectId: projectId,
+    walletConnectProjectId: projectId,
     // Required App Info
     appName: "Petz walletConnect",
     // Optional App Info

